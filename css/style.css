@@ -18,7 +18,7 @@ body {
 }
 
 .m1 {
-  background-image: url("../memes/meme1.jpg");
+  background-image: url("../memes/meme1.gif");
   background-color: white;
 }
 .m2 {
@@ -26,7 +26,7 @@ body {
   background-color: white;
 }
 .m3 {
-  background-image: url("../memes/meme3.jpg");
+  background-image: url("../memes/meme3.gif");
   background-color: white;
 }
 .m4 {
@@ -128,4 +128,60 @@ input:checked ~ p {
 input:checked + label + .slide + p {
   transform: translateX(0);
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    aspect-ratio: 0.8;
+  }
+  label {
+    bottom: 30px;
+  }
+  .label1 {
+    right: 60%;
+  }
+  .label2 {
+    right: 55%;
+  }
+  .label3 {
+    right: 50%;
+  }
+  .label4 {
+    right: 45%;
+  }
+  .label5 {
+    right: 40%;
+  }
+  .slide {
+    height: 92%;
+  }
+}
+
+@media (max-width: 590px) {
+  .container {
+    width: 90%;
+    aspect-ratio: 0.8;
+  }
+  label {
+    bottom: 30px;
+  }
+  .label1 {
+    right: 57%;
+  }
+  .label2 {
+    right: 51%;
+  }
+  .label3 {
+    right: 45%;
+  }
+  .label4 {
+    right: 39%;
+  }
+  .label5 {
+    right: 33%;
+  }
+  .slide {
+    height: 87%;
+  }
 }
