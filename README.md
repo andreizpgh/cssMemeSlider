@@ -1,1 +1,1 @@
-https://andreizpgh.github.io/cssMemeSlider/
+https://andreizpgh.github.io/cssMemeSlider/cssMemeSlider/
