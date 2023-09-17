@@ -6,182 +6,137 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  margin: 0px;
+  margin: 0;
 }
 
 .container {
   width: 90%;
-  max-width: 1200px;
-  aspect-ratio: 1.5;
-  position: relative;
+  max-width: 30rem;
+  aspect-ratio: 0.7;
+  max-height: 35rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+.wrap {
+  width: 100%;
+  height: 90%;
+  border-radius: 1rem;
   overflow: hidden;
 }
 
-.m1 {
-  background-image: url("../memes/meme1.gif");
-  background-color: white;
-}
-.m2 {
-  background-image: url("../memes/meme2.gif");
-  background-color: white;
-}
-.m3 {
-  background-image: url("../memes/meme3.gif");
-  background-color: white;
-}
-.m4 {
-  background-image: url("../memes/meme4.jpg");
-  background-color: white;
-}
-.m5 {
-  background-image: url("../memes/meme5.jpg");
-  background-color: white;
-}
-
-.slide {
-  position: absolute;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.images {
   width: 100%;
-  height: 95%;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  transform: translateX(-100%);
-  transition-duration: 0.4s;
+  height: 100%;
+  display: flex;
+  transition: ease 0.4s;
 }
 
-p {
-  position: absolute;
-  bottom: 0;
+.images img {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  object-fit: contain;
+  background-color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  display: flex;
+  width: 15rem;
+  overflow: hidden;
+  align-items: center;
+}
+
+.description p {
+  width: 12rem;
+  flex: 1 0 100%;
   margin: 0;
-  left: 0px;
-  transform: translateX(-100%);
-  transition-duration: 0.4s;
-  opacity: 0;
+  transition: ease 0.4s;
+}
+
+.buttons {
+  display: flex;
 }
 
 input {
-  position: absolute;
-  opacity: 0;
-  bottom: 0;
-  cursor: pointer;
+  display: none;
+}
+
+.button {
+  display: block;
+  width: 0.8em;
+  height: 0.8rem;
+  background-color: black;
+  border: 0.2rem solid black;
+  border-radius: 50%;
 }
 
 label {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  border: solid 2px #8bbbfe;
-  border-radius: 50%;
-  background-color: #8bbbfe;
-  margin: 0px 6px 0 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition-duration: 0.4s;
+  width: 2rem;
+  height: 2rem;
 }
 
-.label1 {
-  right: 100px;
-}
-
-.label2 {
-  right: 75px;
-}
-
-.label3 {
-  right: 50px;
-}
-
-.label4 {
-  right: 25px;
-}
-
-.label5 {
-  right: 0px;
-}
-
-label:hover {
-  border-color: white;
+label:hover .button {
   background-color: white;
+  border-color: white;
 }
 
-input:checked + label {
+input:checked + label .button {
   background-color: transparent;
 }
 
-input:checked ~ .slide {
-  transform: translateX(100%);
+.container:has(#button1:checked) .images {
+  transform: translateX(0);
 }
-
-input:checked + label + .slide {
+.container:has(#button1:checked) .description p {
   transform: translateX(0);
 }
 
-input:checked ~ p {
-  transform: translateX(100%);
-  opacity: 0;
+.container:has(#button2:checked) .images {
+  transform: translateX(-100%);
+}
+.container:has(#button2:checked) .description p {
+  transform: translateX(-100%);
 }
 
-input:checked + label + .slide + p {
-  transform: translateX(0);
-  opacity: 1;
+.container:has(#button3:checked) .images {
+  transform: translateX(-200%);
+}
+.container:has(#button3:checked) .description p {
+  transform: translateX(-200%);
+}
+
+.container:has(#button4:checked) .images {
+  transform: translateX(-300%);
+}
+.container:has(#button4:checked) .description p {
+  transform: translateX(-300%);
+}
+
+.container:has(#button5:checked) .images {
+  transform: translateX(-400%);
+}
+.container:has(#button5:checked) .description p {
+  transform: translateX(-400%);
 }
 
 @media (max-width: 768px) {
-  .container {
-    width: 90%;
-    aspect-ratio: 0.8;
+  .footer {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
   }
-  label {
-    bottom: 30px;
-  }
-  .label1 {
-    right: 60%;
-  }
-  .label2 {
-    right: 55%;
-  }
-  .label3 {
-    right: 50%;
-  }
-  .label4 {
-    right: 45%;
-  }
-  .label5 {
-    right: 40%;
-  }
-  .slide {
-    height: 92%;
-  }
-}
-
-@media (max-width: 590px) {
-  .container {
-    width: 90%;
-    aspect-ratio: 0.8;
-  }
-  label {
-    bottom: 30px;
-  }
-  .label1 {
-    right: 57%;
-  }
-  .label2 {
-    right: 51%;
-  }
-  .label3 {
-    right: 45%;
-  }
-  .label4 {
-    right: 39%;
-  }
-  .label5 {
-    right: 33%;
-  }
-  .slide {
-    height: 87%;
+  .wrap {
+    height: 85%;
   }
 }

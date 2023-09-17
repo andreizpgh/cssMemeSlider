@@ -5,36 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Slider</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
 
-        <input type="radio" id="meme1" name="slider" checked autofocus>
-        <label class="label1" for="meme1"></label>
-        <div class="slide m1"></div>
-        <p>Hilarious meme</p>
+        <footer class="footer">
+            <div class="description">
+                <p>Hilarious meme</p>
+                <p>No, this one is better</p>
+                <p>Wait, this meme's the best</p>
+                <p>It's genius HAHAHA</p>
+                <p>My brain hurts</p>
+            </div>
+            <div class="buttons">
+                <input id="button1" type="radio" name="slider" checked autofocus>
+                <label for="button1">
+                    <span class="button"></span>
+                </label>
+                <input id="button2" type="radio" name="slider">
+                <label for="button2">
+                    <span class="button"></span>
+                </label>
+                <input id="button3" type="radio" name="slider">
+                <label for="button3">
+                    <span class="button"></span>
+                </label>
+                <input id="button4" type="radio" name="slider">
+                <label for="button4">
+                    <span class="button"></span>
+                </label>
+                <input id="button5" type="radio" name="slider">
+                <label for="button5">
+                    <span class="button"></span>
+                </label>
+            </div>
+        </footer>
 
-        <input type="radio" id="meme2" name="slider">
-        <label class="label2" for="meme2"></label>
-        <div class="slide m2"></div>
-        <p>No, this one is better</p>
-
-        <input type="radio" id="meme3" name="slider">
-        <label class="label3" for="meme3"></label>
-        <div class="slide m3"></div>
-        <p>Wait, this meme's the best</p>
-
-        <input type="radio" id="meme4" name="slider">
-        <label class="label4" for="meme4"></label>
-        <div class="slide m4"></div>
-        <p>It's genius HAHAHA</p>
-
-        <input type="radio" id="meme5" name="slider">
-        <label class="label5" for="meme5"></label>
-        <div class="slide m5"></div>
-        <p>My brain hurts</p>
+        <div class="wrap">
+            <div class="images">
+                <img src="images/meme1.gif" alt="First hilarious meme">
+                <img src="images/meme2.gif" alt="Second hilarious meme">
+                <img src="images/meme3.gif" alt="Third hilarious meme">
+                <img src="images/meme4.jpg" alt="Fourth hilarious meme">
+                <img src="images/meme5.jpg" alt="Fifth hilarious meme">
+            </div>
+        </div>
 
     </div>
 </body>
