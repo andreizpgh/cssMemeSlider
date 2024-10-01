@@ -1,0 +1,142 @@
+body {
+  background-color: #262626;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 30rem;
+  aspect-ratio: 0.7;
+  max-height: 35rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+.wrap {
+  width: 100%;
+  height: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: ease 0.4s;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  object-fit: contain;
+  background-color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  display: flex;
+  width: 15rem;
+  overflow: hidden;
+  align-items: center;
+}
+
+.description p {
+  width: 12rem;
+  flex: 1 0 100%;
+  margin: 0;
+  transition: ease 0.4s;
+}
+
+.buttons {
+  display: flex;
+}
+
+input {
+  display: none;
+}
+
+.button {
+  display: block;
+  width: 0.8em;
+  height: 0.8rem;
+  background-color: black;
+  border: 0.2rem solid black;
+  border-radius: 50%;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+label:hover .button {
+  background-color: white;
+  border-color: white;
+}
+
+input:checked + label .button {
+  background-color: transparent;
+}
+
+.container:has(#button1:checked) .images {
+  transform: translateX(0);
+}
+.container:has(#button1:checked) .description p {
+  transform: translateX(0);
+}
+
+.container:has(#button2:checked) .images {
+  transform: translateX(-100%);
+}
+.container:has(#button2:checked) .description p {
+  transform: translateX(-100%);
+}
+
+.container:has(#button3:checked) .images {
+  transform: translateX(-200%);
+}
+.container:has(#button3:checked) .description p {
+  transform: translateX(-200%);
+}
+
+.container:has(#button4:checked) .images {
+  transform: translateX(-300%);
+}
+.container:has(#button4:checked) .description p {
+  transform: translateX(-300%);
+}
+
+.container:has(#button5:checked) .images {
+  transform: translateX(-400%);
+}
+.container:has(#button5:checked) .description p {
+  transform: translateX(-400%);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+  .wrap {
+    height: 85%;
+  }
+}
